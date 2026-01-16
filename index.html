@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Spesial Untukmu</title>
+    <style>
+        /* CSS untuk mempercantik tampilan */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #880e4f;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 350px;
+            width: 90%;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .heart {
+            color: #e91e63;
+            font-size: 50px;
+            animation: beat 1s infinite;
+        }
+
+        h1 { font-size: 24px; margin-bottom: 10px; }
+        p { font-size: 16px; line-height: 1.6; }
+
+        .btn {
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover { background-color: #c2185b; transform: scale(1.05); }
+
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="heart">❤️</div>
+        <h1>Hi Hanifah,</h1>
+        <p>Semoga kamu bisa melewati hari-hari beratmu dengan penuh senyuman dan semangat. tetap ingat Allah ada di setiap langkah kebaikanmu.</p>
+        <p><i>"Semoga sukses muskomnya, yang terbaik hasilnya, dan semakin dimudahkan untuk urusan selanjutnya."</i></p>
+        
+        <button class="btn" onclick="tampilkanPesan()">Klik Pesan Rahasia</button>
+        
+        <div id="secret-msg" style="display:none; margin-top:20px; font-weight:bold; color:#d81b60;">
+            I Love You More! 💍
+        </div>
+    </div>
+
+    <script>
+        function tampilkanPesan() {
+            var msg = document.getElementById("secret-msg");
+            if (msg.style.display === "none") {
+                msg.style.display = "block";
+            } else {
+                msg.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
