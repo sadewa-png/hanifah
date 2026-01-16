@@ -3,93 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesan Spesial Untukmu</title>
+    <title>Untuk Hanifah ✨</title>
     <style>
-        /* CSS untuk mempercantik tampilan */
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #880e4f;
-            text-align: center;
+            margin: 0; padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Font lebih lucu */
+            background: #fff9db; /* Kuning pastel ceria */
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh; color: #5c940d; text-align: center;
         }
-
         .card {
             background: white;
             padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            max-width: 350px;
-            width: 90%;
-            animation: fadeIn 2s ease-in;
+            border-radius: 30px;
+            border: 4px dashed #fab005; /* Garis putus-putus imut */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            max-width: 350px; width: 85%;
+            position: relative;
         }
-
-        .heart {
-            color: #e91e63;
-            font-size: 50px;
-            animation: beat 1s infinite;
-        }
-
-        h1 { font-size: 24px; margin-bottom: 10px; }
-        p { font-size: 16px; line-height: 1.6; }
-
+        .sticker-corner { position: absolute; top: -20px; right: -10px; font-size: 40px; }
+        .smile { font-size: 50px; animation: bounce 0.6s infinite alternate; }
+        h1 { font-size: 22px; color: #e67e22; }
         .btn {
-            background-color: #e91e63;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: 0.3s;
-            text-decoration: none;
-            display: inline-block;
+            background-color: #fab005;
+            color: white; border: none; padding: 12px 25px;
+            border-radius: 50px; cursor: pointer; font-weight: bold;
+            margin-top: 20px; transition: 0.3s;
         }
-
-        .btn:hover { background-color: #c2185b; transform: scale(1.05); }
-
-        @keyframes beat {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
+        .btn:hover { transform: scale(1.1); background-color: #f39c12; }
+        #secret-msg img {
+            width: 100%; border-radius: 20px; 
+            border: 5px solid #fff9db; margin-top: 15px;
         }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-15px); }
         }
     </style>
 </head>
 <body>
-
     <div class="card">
-        <div class="heart">❤️</div>
+        <div class="sticker-corner">🌈</div>
+        <div class="smile">😊</div>
         <h1>Hi Hanifah,</h1>
-        <p>Semoga kamu bisa melewati hari-hari beratmu dengan penuh senyuman dan semangat. tetap ingat Allah ada di setiap langkah kebaikanmu.</p>
-        <p><i>"Semoga sukses muskomnya, yang terbaik hasilnya, dan semakin dimudahkan untuk urusan selanjutnya."</i></p>
+        <p>Semoga kamu bisa melewati hari-hari beratmu dengan penuh senyuman dan semangat. Tetap ingat Allah ada di setiap langkah kebaikanmu.</p>
         
-        <button class="btn" onclick="tampilkanPesan()">Klik Pesan Rahasia</button>
-        
+        <button class="btn" onclick="tampilkanPesan()">Klik Pesan Rahasia 🎁</button>
+
         <div id="secret-msg" style="display:none; margin-top:20px; font-weight:bold; color:#d81b60;">
             I Love You More! 💍
+            <br>
+            <img src="foto-hanifah.jpg" alt="Foto Kita">
+            <p style="font-size: 14px; color: #fab005;">✨ Kamu hebat banget hari ini! ✨</p>
         </div>
     </div>
 
     <script>
         function tampilkanPesan() {
             var msg = document.getElementById("secret-msg");
-            if (msg.style.display === "none") {
-                msg.style.display = "block";
-            } else {
-                msg.style.display = "none";
-            }
+            msg.style.display = (msg.style.display === "none") ? "block" : "none";
         }
     </script>
-
 </body>
 </html>
